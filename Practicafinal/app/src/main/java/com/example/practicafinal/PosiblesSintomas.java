@@ -8,12 +8,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 
-public class MainActivity extends AppCompatActivity {
+public class PosiblesSintomas extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.posibles_sintomas);
 
         final CheckBox fiebre = (CheckBox)findViewById(R.id.CbFiebre);
         final CheckBox gusto = (CheckBox)findViewById(R.id.CbGusto);
@@ -28,12 +28,12 @@ public class MainActivity extends AppCompatActivity {
 
                     if(fiebre.isChecked() && fatiga.isChecked()){
                         posiblePositivo();
-                    }
-                    if(cabeza.isChecked() && fatiga.isChecked() && gusto.isChecked()){
+                    }else if(cabeza.isChecked() && fatiga.isChecked() && gusto.isChecked()){
                         posiblePositivo();
-                    }
-                    if(diarrea.isChecked() && fatiga.isChecked() && gusto.isChecked()){
+                    }else if(diarrea.isChecked() && fatiga.isChecked() && gusto.isChecked()){
                         posiblePositivo();
+                    }else{
+                        posibleNegativo();
                     }
 
             }
@@ -44,5 +44,9 @@ public class MainActivity extends AppCompatActivity {
     public void posiblePositivo(){
         Intent intent= new Intent(this,  Sintomas.class);
         startActivity(intent);
+    }
+
+    public void posibleNegativo(){
+
     }
 }
