@@ -7,6 +7,29 @@
     android:layout_height="match_parent">
 
     <TextView
+        android:id="@+id/textView10"
+        android:layout_width="378dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="5dp"
+        android:text="La pandemia de COVID-19 nos ha llevado a muchos a quedarnos en casa, donde mantenemos menos interacciones sociales y hacemos menos ejercicio. Por ello es importante mantenerse activos, cuidar nuestra salud mental, dejar el tabaco y mantener una dieta saludable"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#28BBDF"
+        android:gravity="center"
+        android:text="Sanos en casa"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <TextView
         android:id="@+id/textView8"
         android:layout_width="379dp"
         android:layout_height="100dp"
