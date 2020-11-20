@@ -8,7 +8,7 @@
     android:background="@drawable/fondo"
     tools:context=".MainActivity">
 
-    <com.example.navdrawer.ControlLogin
+    <com.example.navdrawer.Login
         android:id="@+id/Cntrollogin"
         android:layout_width="338dp"
         android:layout_height="365dp"
@@ -21,7 +21,7 @@
         app:layout_constraintVertical_bias="0.759"
         tools:ignore="MissingConstraints">
 
-    </com.example.navdrawer.ControlLogin>
+    </com.example.navdrawer.Login>
 
 
 
