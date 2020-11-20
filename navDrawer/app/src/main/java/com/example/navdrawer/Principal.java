@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
 
+import com.example.navdrawer.ui.Recomendaciones;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -50,6 +51,14 @@ public class Principal extends AppCompatActivity {
 
         });
 
+        fab3.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                recomendaciones();
+            }
+
+        });
+
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
@@ -79,6 +88,11 @@ public class Principal extends AppCompatActivity {
 
     public void comprobarSintomas(){
         Intent intent= new Intent(this,  PosiblesSintomas.class);
+        startActivity(intent);
+    }
+
+    public void recomendaciones(){
+        Intent intent= new Intent(this,  Recomendaciones.class);
         startActivity(intent);
     }
 }

@@ -26,7 +26,6 @@ public class Menu extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         FloatingActionButton fab2 = (FloatingActionButton) findViewById(R.id.fab2);
-        @SuppressLint("WrongViewCast") final EditText texto = (EditText) findViewById(R.id.mensaje);
 
     }
 
