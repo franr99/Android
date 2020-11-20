@@ -25,14 +25,12 @@ public class Menu extends AppCompatActivity {
         setContentView(R.layout.app_bar_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab2);
+        FloatingActionButton fab2 = (FloatingActionButton) findViewById(R.id.fab2);
         @SuppressLint("WrongViewCast") final EditText texto = (EditText) findViewById(R.id.mensaje);
 
-        fab.setOnClickListener(new View.OnClickListener() {
-            Snackbar.make(View, "seccion sintomas", Snackbar.LENGHTLONG)
-
-        });
     }
+
+
 
     public void comprobarSintomas(){
         Intent intent= new Intent(this,  PosiblesSintomas.class);
