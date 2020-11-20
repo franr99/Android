@@ -29,6 +29,11 @@
             android:theme="@style/AppTheme">
         </activity>
 
+        <activity
+            android:name="com.example.navdrawer.ui.Menu"
+            android:theme="@style/AppTheme">
+        </activity>
+
     </application>
 
 </manifest>
