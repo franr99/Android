@@ -42,8 +42,8 @@ public class Login extends LinearLayout {
         li.inflate(R.layout.control_login, this, true);
 
         //obtenemos referencias
-        textousuario= findViewById(R.id.editText1);
-        textopassword= findViewById(R.id.editText2);
+        textousuario= findViewById(R.id.et_usuario);
+        textopassword= findViewById(R.id.et_pasword);
         botonlogin= findViewById(R.id.button1);
         labellogin= findViewById(R.id.textView3);
 
