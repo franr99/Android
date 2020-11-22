@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void registrar(){
-        Intent intent = new Intent(this, Registrar.class);
+        Intent intent = new Intent(this, ControlRegistrar.class);
         startActivity(intent);
     }
 
