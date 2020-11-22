@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_murcia"
+        android:layout_width="207dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="56dp"
+        android:background="#AA000000"
+        android:paddingTop="5dp"
+        android:paddingRight="60dp"
+
+        android:text="MURCIA"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_confinamiento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confinamiento"
+        tools:layout_editor_absoluteX="29dp"
+        tools:layout_editor_absoluteY="131dp" />
+
+    <TextView
+        android:id="@+id/tv_tq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Toque de queda"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="218dp" />
+
+    <TextView
+        android:id="@+id/tv_reuniones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reuniones sociales"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="298dp" />
+
+    <TextView
+        android:id="@+id/tv_normativa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Normativa"
+        tools:layout_editor_absoluteX="39dp"
+        tools:layout_editor_absoluteY="391dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

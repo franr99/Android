@@ -59,6 +59,20 @@ public class Principal extends AppCompatActivity {
 
         });
 
+        fab4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mapa();
+            }
+        });
+
+        fab5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                restricciones();
+            }
+        });
+
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
@@ -93,6 +107,16 @@ public class Principal extends AppCompatActivity {
 
     public void recomendaciones(){
         Intent intent= new Intent(this,  Recomendaciones.class);
+        startActivity(intent);
+    }
+
+    public void mapa(){
+        Intent intent= new Intent(this,  MapaCasos.class);
+        startActivity(intent);
+    }
+
+    public void restricciones(){
+        Intent intent= new Intent(this,  Restricciones.class);
         startActivity(intent);
     }
 }
