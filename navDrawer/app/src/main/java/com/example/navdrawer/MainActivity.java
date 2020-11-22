@@ -1,37 +1,59 @@
 package com.example.navdrawer;
 
 
-
-import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 
 public class MainActivity extends AppCompatActivity {
 
     private Login cl;
     private TextView tv;
+    private EditText textousuario;
+    private EditText textopassword;
+    private Button botonlogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
 
+        final ConexionSQLiteHelper conexion  = new ConexionSQLiteHelper(this,"Usuarios",null,1);
+        final SQLiteDatabase bbdd = conexion.getReadableDatabase();
+        textousuario= findViewById(R.id.et_usuario);
         tv = (TextView)findViewById(R.id.tv_registrarse);
         cl = (Login) findViewById(R.id.Cntrollogin);
         cl.setOnLoginListener(new OnLoginListener(){
             @Override
-            public void onLogin(String usuario, String password){
-                //se valida si coinciden los usuarios
-                if (usuario.equals("UCAM") && password.equals("1234")){
+            public void onLogin(String usuario, String password) {
 
-                    cl.setMensaje("Acceso concedido");
+                Cursor c = bbdd.rawQuery("SELECT nombre FROM Usuarios WHERE nombre ='" + usuario + "' AND contraseña='" + password + "'", null);
+
+                try {
+                    if (c != null) {
+                        c.moveToFirst();
+                        do {
+                            String nombre = c.getString(c.getColumnIndex("nombre"));
+
+                        } while (c.moveToNext());
+                    }
+
+                    //Cerramos el cursor y la conexion con la base de datos
+                    c.close();
+                    //bbdd.close();
                     login();
+                } catch (Exception e) {
+                    Toast.makeText(getApplicationContext(), "Usuario o contraseña incorrectos.", Toast.LENGTH_LONG).show();
                 }
-                else
-                    cl.setMensaje("No tienes acceso");
             }
         });
 

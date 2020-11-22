@@ -1,16 +1,12 @@
 package com.example.navdrawer;
 
 import android.content.ContentValues;
-import android.content.Context;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.util.AttributeSet;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -35,8 +31,8 @@ public class ControlRegistrar extends AppCompatActivity {
         etCorreo = (EditText)findViewById(R.id.et_correo);
         etPassword = (EditText)findViewById(R.id.et_Rpassword);
 
-        Usuarios usuario = new Usuarios(this,"Usuarios",null,1);
-        final SQLiteDatabase bbdd = usuario.getWritableDatabase();
+        ConexionSQLiteHelper conexion = new ConexionSQLiteHelper(this, "Usuarios", null,1);
+        final SQLiteDatabase bbdd = conexion.getWritableDatabase();
 
         btregistrar.setOnClickListener(new View.OnClickListener() {
             @Override
