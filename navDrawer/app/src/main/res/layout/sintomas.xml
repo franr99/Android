@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#fff">
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="350dp"
-        android:layout_height="107dp"
-        android:layout_marginTop="40dp"
-        android:background="#dcffe6"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#28BBDF"
+        android:gravity="center"
+        android:textColor="#fff"
         android:paddingLeft="10dp"
         android:paddingTop="10dp"
         android:paddingRight="10dp"
-        android:text="¡¡Atención, usted padece los principales sintomas de COVID, pongase en contacto con un medico a traves del siguiente botón!!"
-        android:textSize="18sp"
+        android:text="USTED ES POSIBLE POSITIVO EN COVID"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -25,50 +26,60 @@
         android:id="@+id/BtPCR"
         android:layout_width="170dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="80dp"
         android:background="@drawable/botones"
-        android:textColor="#fff"
         android:text="Pedir cita para PCR"
+        android:textColor="#fff"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="352dp"
-        android:layout_height="126dp"
-        android:layout_marginTop="28dp"
-        android:background="#dcffe6"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:background="#28BBDF"
         android:paddingLeft="10dp"
         android:paddingTop="10dp"
         android:paddingRight="10dp"
-        android:text="Recuerde permacener en aislamiento hasta verificar el resultado del PCR, priorice las medidas de seguridad como el empleo de mascarilla, labado de manos..."
+        android:text="Recuerde que este test no garantiza que usted sea positivo, para ello ponemos a su disposición el número de atención covid de la Región de Murcia en el botón inferior donde se le realizara un test PCR.\n\nSin embargo, usted deberia de mantenerse en cuarentena cumpliendo todas las medidas hasta confirmar su resultado."
+        android:textColor="#fff"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-    <pl.droidsonroids.gif.GifImageView
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="170dp"
-        android:layout_marginLeft="170dp"
-        android:layout_marginTop="50dp"
-        android:src="@drawable/covid"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/BtPCR" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView13" />
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="300dp"
-        android:layout_height="170dp"
-        android:layout_marginTop="30dp"
+        android:id="@+id/imageView9"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintTop_toTopOf="@+id/textView5"
+        app:srcCompat="@android:drawable/stat_notify_error" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/stat_sys_warning" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
         app:layout_constraintTop_toBottomOf="@+id/textView5"
-        app:srcCompat="@drawable/covid_sintomas" />
+        app:srcCompat="@drawable/posible_pos"
+        tools:layout_editor_absoluteX="113dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
