@@ -47,6 +47,7 @@ public class PosiblesSintomas extends AppCompatActivity {
     }
 
     public void posibleNegativo(){
-
+        Intent intent= new Intent(this,  SinSintomas.class);
+        startActivity(intent);
     }
 }

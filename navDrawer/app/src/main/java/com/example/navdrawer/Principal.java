@@ -111,7 +111,7 @@ public class Principal extends AppCompatActivity {
     }
 
     public void mapa(){
-        Intent intent= new Intent(this,  MapaCasos.class);
+        Intent intent= new Intent(this,  MapsActivity.class);
         startActivity(intent);
     }
 

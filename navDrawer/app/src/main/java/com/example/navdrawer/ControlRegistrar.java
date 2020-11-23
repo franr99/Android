@@ -6,7 +6,9 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -30,6 +32,7 @@ public class ControlRegistrar extends AppCompatActivity {
         etTlf = (EditText)findViewById(R.id.et_telefono);
         etCorreo = (EditText)findViewById(R.id.et_correo);
         etPassword = (EditText)findViewById(R.id.et_Rpassword);
+        final CheckBox aceptar = (CheckBox)findViewById(R.id.cbAceptar);
 
         ConexionSQLiteHelper conexion = new ConexionSQLiteHelper(this, "Usuarios", null,1);
         final SQLiteDatabase bbdd = conexion.getWritableDatabase();
@@ -37,22 +40,27 @@ public class ControlRegistrar extends AppCompatActivity {
         btregistrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ContentValues valores = new ContentValues();
-                valores.put("nombre", etUsuario.getText().toString());
-                valores.put("telefono", etTlf.getText().toString());
-                valores.put("correo", etCorreo.getText().toString());
-                valores.put("contraseña", etPassword.getText().toString());
 
-                bbdd.insert("Usuarios",null,valores);
+                if(aceptar.isChecked()){
+                    ContentValues valores = new ContentValues();
+                    valores.put("nombre", etUsuario.getText().toString());
+                    valores.put("telefono", etTlf.getText().toString());
+                    valores.put("correo", etCorreo.getText().toString());
+                    valores.put("contraseña", etPassword.getText().toString());
 
-                etUsuario.setText(null);
-                etTlf.setText(null);
-                etCorreo.setText(null);
-                etPassword.setText(null);
+                    bbdd.insert("Usuarios",null,valores);
 
-                lanzar();
+                    etUsuario.setText(null);
+                    etTlf.setText(null);
+                    etCorreo.setText(null);
+                    etPassword.setText(null);
+
+                    lanzar();
+                }else{
+                    Toast.makeText(getApplicationContext(), "Debe aceptar el tratamiento de sus datos para ser registrado.", Toast.LENGTH_LONG).show();
+                }
+
             }
-
 
         });
 
@@ -62,8 +70,5 @@ public class ControlRegistrar extends AppCompatActivity {
         Intent intent= new Intent(this,  MainActivity.class);
         startActivity(intent);
     }
-
-
-
 
 }
