@@ -13,6 +13,8 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.hardware.location.gps" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
     
 
     <application
@@ -69,6 +71,9 @@
             android:name=".SinSintomas"
             android:label="¡¡Advertencia!!"
             android:theme="@style/Theme.AppCompat.Dialog"></activity>
+        <activity
+            android:name=".Restricciones"
+            android:theme="@style/AppTheme"></activity>
 
     </application>
 
