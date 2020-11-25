@@ -73,14 +73,14 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tv_normativa"
+        android:id="@+id/tv_restricciones"
         android:layout_width="203dp"
         android:layout_height="23dp"
         android:layout_marginBottom="280dp"
         android:background="#AA000000"
         android:paddingLeft="30dp"
         android:paddingTop="1dp"
-        android:text="Normativa"
+        android:text="Restricciones"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -159,12 +159,12 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
-        android:layout_width="199dp"
-        android:layout_height="85dp"
-        android:layout_marginBottom="172dp"
+        android:layout_width="256dp"
+        android:layout_height="185dp"
+        android:layout_marginBottom="72dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.382"
+        app:layout_constraintHorizontal_bias="0.522"
         app:layout_constraintStart_toStartOf="parent" />
 
 
