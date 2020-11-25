@@ -22,7 +22,7 @@ public class Restricciones extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.restricciones);
         TextView info = findViewById(R.id.tv_confinamiento2);
-        TextView info1 = findViewById(R.id.tv_confinamiento2);
+        TextView info1 = findViewById(R.id.tv_confinamiento3);
 
         info.setOnClickListener(new View.OnClickListener() {
             @Override
