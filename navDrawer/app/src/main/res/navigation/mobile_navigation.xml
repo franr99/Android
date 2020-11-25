@@ -15,7 +15,7 @@
         android:id="@+id/nav_condiciones"
         android:name="com.example.navdrawer.ui.condiciones.CondicionesFragment"
         android:label="@string/menu_cond"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/fragment_condiciones" />
 
 
 </navigation>
