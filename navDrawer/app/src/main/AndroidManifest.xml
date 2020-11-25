@@ -75,6 +75,10 @@
             android:name=".Restricciones"
             android:theme="@style/AppTheme"></activity>
 
+        <activity
+            android:name=".YoutubeVideos"
+            android:theme="@style/AppTheme"></activity>
+
     </application>
 
 </manifest>

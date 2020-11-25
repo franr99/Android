@@ -157,15 +157,17 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/reunion" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
-        android:layout_width="256dp"
-        android:layout_height="185dp"
-        android:layout_marginBottom="72dp"
+    <com.example.navdrawer.YoutubeVideos
+
+        android:id="@+id/ControlYoutube"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:radius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.522"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
