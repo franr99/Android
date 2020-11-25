@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
+import android.widget.Button;
 
 import com.example.navdrawer.ui.Recomendaciones;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -75,6 +76,7 @@ public class Principal extends AppCompatActivity {
             }
         });
 
+
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
@@ -130,5 +132,10 @@ public class Principal extends AppCompatActivity {
         Intent intentTfno = new Intent(Intent.ACTION_DIAL);
         intentTfno.setData(Uri.parse("tel:900121212"));
         startActivity(intentTfno);
+    }
+
+    public void youtube(){
+        Intent intent= new Intent(this,  YoutubeVideos.class);
+        startActivity(intent);
     }
 }

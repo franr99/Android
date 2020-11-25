@@ -1,6 +1,8 @@
 package com.example.navdrawer;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.google.android.youtube.player.YouTubeBaseActivity;
 import com.google.android.youtube.player.YouTubeInitializationResult;
@@ -22,9 +24,9 @@ public class YoutubeVideos extends YouTubeBaseActivity implements YouTubePlayer.
 
     @Override
     public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
-        if(!b){
+
             youTubePlayer.cueVideo("Jgu6DVjCb8s");
-        }
+
     }
 
     @Override
@@ -33,6 +35,15 @@ public class YoutubeVideos extends YouTubeBaseActivity implements YouTubePlayer.
         if (youTubeInitializationResult.isUserRecoverableError()) {
 
             youTubeInitializationResult.getErrorDialog(this,1).show();
+        }else{
+            String error = "Error al incializar youtube" + youTubeInitializationResult.toString();
+            Toast.makeText(getApplication(),error,Toast.LENGTH_LONG).show();
+        }
+    }
+
+    public void OnActivityResult(int requestCode, int resultCode, Intent data){
+        if(resultCode==1){
+
         }
     }
 }

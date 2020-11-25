@@ -7,11 +7,46 @@
     android:layout_height="match_parent">
 
     <TextView
+        android:id="@+id/tv_confinamiento3"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="80dp"
+        android:background="#28BBDF"
+        android:clickable="true"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:text="Mas información"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_restricciones" />
+
+    <TextView
+        android:id="@+id/tv_confinamiento2"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="20dp"
+        android:background="#28BBDF"
+        android:clickable="true"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:text="Mas información"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_restricciones" />
+
+    <TextView
         android:id="@+id/tv_murcia"
         android:layout_width="207dp"
         android:layout_height="38dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="40dp"
         android:background="#AA000000"
+        android:gravity="center_horizontal"
         android:paddingTop="5dp"
         android:paddingRight="60dp"
         android:text="MURCIA"
@@ -21,8 +56,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:gravity="center_horizontal" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_confinamiento"
@@ -75,12 +109,12 @@
     <TextView
         android:id="@+id/tv_restricciones"
         android:layout_width="203dp"
-        android:layout_height="23dp"
-        android:layout_marginBottom="280dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="272dp"
         android:background="#AA000000"
         android:paddingLeft="30dp"
-        android:paddingTop="1dp"
-        android:text="Restricciones"
+        android:paddingTop="5dp"
+        android:text="Normativa"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -157,17 +191,15 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/reunion" />
 
-    <com.example.navdrawer.YoutubeVideos
-
-        android:id="@+id/ControlYoutube"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:radius="10dp"
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:srcCompat="@drawable/consejeria" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
