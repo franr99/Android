@@ -21,50 +21,65 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center_horizontal" />
 
     <TextView
         android:id="@+id/tv_confinamiento"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="140dp"
+        android:layout_width="125dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="108dp"
+        android:background="#28BBDF"
         android:text="Confinamiento"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#FFFFFF"
+        android:paddingTop="5dp"
+        android:paddingLeft="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.093"
+        app:layout_constraintHorizontal_bias="0.209"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_tq"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="252dp"
+        android:layout_width="125dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="236dp"
+        android:background="#28BBDF"
         android:text="Toque de queda"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#FFFFFF"
+        android:paddingTop="5dp"
+        android:paddingLeft="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.096"
+        app:layout_constraintHorizontal_bias="0.209"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_reuniones"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="332dp"
-        android:text="Reuniones sociales"
+        android:layout_width="125dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="324dp"
+        android:background="#28BBDF"
+        android:text="Reuniones"
+        android:paddingTop="5dp"
+        android:paddingLeft="10dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.103"
+        app:layout_constraintHorizontal_bias="0.209"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_normativa"
-        android:layout_width="130dp"
-        android:layout_height="27dp"
-        android:layout_marginBottom="272dp"
+        android:layout_width="203dp"
+        android:layout_height="23dp"
+        android:layout_marginBottom="280dp"
         android:background="#AA000000"
+        android:paddingLeft="30dp"
+        android:paddingTop="1dp"
         android:text="Normativa"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -76,10 +91,10 @@
         android:id="@+id/tv_1"
         android:layout_width="292dp"
         android:layout_height="76dp"
-        android:layout_marginTop="168dp"
+        android:layout_marginTop="144dp"
         android:text="@string/confinamiento"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.238"
+        app:layout_constraintHorizontal_bias="0.252"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -87,12 +102,11 @@
         android:id="@+id/tv_2"
         android:layout_width="308dp"
         android:layout_height="39dp"
-        android:layout_marginTop="284dp"
+        android:layout_marginTop="272dp"
         android:autoText="false"
         android:text="@string/toque_queda"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.291"
+        app:layout_constraintHorizontal_bias="0.281"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -100,11 +114,58 @@
         android:id="@+id/tv_3"
         android:layout_width="324dp"
         android:layout_height="55dp"
-        android:layout_marginBottom="316dp"
+        android:layout_marginTop="360dp"
         android:text="@string/reuniones"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="31dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="108dp"
+        android:background="#28BBDF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.078"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/confinamiento" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="31dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="236dp"
+        android:background="#28BBDF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.078"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/reloj" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="31dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="324dp"
+        android:background="#28BBDF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.076"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/reunion" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="199dp"
+        android:layout_height="85dp"
+        android:layout_marginBottom="172dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.344"
+        app:layout_constraintHorizontal_bias="0.382"
         app:layout_constraintStart_toStartOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
