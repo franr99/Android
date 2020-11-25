@@ -1,6 +1,7 @@
 package com.example.navdrawer;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
@@ -40,6 +41,7 @@ public class Principal extends AppCompatActivity {
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+                llamar();
             }
         });
 
@@ -111,12 +113,22 @@ public class Principal extends AppCompatActivity {
     }
 
     public void mapa(){
-        Intent intent= new Intent(this,  MapsActivity.class);
-        startActivity(intent);
+        //Intent intent= new Intent(this,  MapsActivity.class);
+        //startActivity(intent);
+        Uri gmmIntentUri = Uri.parse("geo:37.991666072223346, -1.130480766038519?q=hospitals");
+        Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+        mapIntent.setPackage("com.google.android.apps.maps");
+        startActivity(mapIntent);
     }
 
     public void restricciones(){
         Intent intent= new Intent(this,  Restricciones.class);
         startActivity(intent);
+    }
+
+    public void llamar(){
+        Intent intentTfno = new Intent(Intent.ACTION_DIAL);
+        intentTfno.setData(Uri.parse("tel:900121212"));
+        startActivity(intentTfno);
     }
 }
